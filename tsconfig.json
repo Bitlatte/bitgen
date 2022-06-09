@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2015",
+    "outDir": "bin"
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "bin"
+  ]
+}
