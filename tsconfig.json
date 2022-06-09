@@ -9,7 +9,7 @@
     "outDir": "bin"
   },
   "include": [
-    "src"
+    "src/**/*"
   ],
   "exclude": [
     "bin"
