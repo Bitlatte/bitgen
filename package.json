@@ -1,7 +1,8 @@
 {
-  "name": "create-app",
+  "name": "bitgen",
   "version": "0.1.0",
   "description": "CLI Utility to quickly start new projects",
+  "bin": "./bin/src/index.js",
   "scripts": {
     "build": "tsc",
     "lint": "eslint",
