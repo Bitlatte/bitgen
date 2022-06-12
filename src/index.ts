@@ -11,6 +11,7 @@ interface ProgramOptions {
   svelte?: boolean;
   vue?: boolean;
   api?: boolean;
+  microservice?: boolean;
 }
 
 program.name(name).version(version).description(description);
@@ -19,7 +20,8 @@ program
   .option("-r, --react", "create a new react app")
   .option("-s, --svelte", "create a new svelte app")
   .option("-v, --vue", "create a new vue app")
-  .option("-a, --api", "react a new restful api")
+  .option("-a, --api", "create a new restful api")
+  .option("-m, --microservice", "create a new express microservice")
   .argument("<path>", "where to create the new project")
   .action((path: string, options: ProgramOptions) => {
     let url: string;
@@ -39,6 +41,10 @@ program
     if (options.api) {
       url = "https://codeload.github.com/Bitlatte/REST-boilerplate/zip/main";
       create(url, outDir, "api");
+    }
+    if (options.microservice) {
+      url = "https://codeload.github.com/Bitlatte/microservice/zip/main";
+      create(url, outDir, "microservice");
     }
   });
 

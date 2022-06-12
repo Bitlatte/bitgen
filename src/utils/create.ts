@@ -13,7 +13,9 @@ const create = (url: string, path: string, type: string) => {
         Extractor(stream, process.cwd()).then(() => {
           rename(
             type !== "api"
-              ? `${process.cwd()}/vite-${type}-main`
+              ? type !== "microservice"
+                ? `${process.cwd()}/vite-${type}-main`
+                : `${process.cwd()}/microservice-main`
               : `${process.cwd()}/REST-boilerplate-main`,
             path,
             (err) => {
